@@ -203,18 +203,16 @@ header img-header {
 main {
   width: 100%;
 }
-main article {
-  margin: 0 50px;
-}
-.about {
+.about_section {
   width: 653px;
 }
-article {
+.about {
   display: flex;
   justify-content: space-between;
   padding: 50px 0;
+  margin: 0 50px;
 }
-article h2 {
+.about h2 {
   /* Style for "About your" */
   color: #445161;
   font-family: "Arial";
@@ -223,7 +221,7 @@ article h2 {
   line-height: 36px;
   padding-bottom: 30px;
 }
-article p {
+.about p {
   /* Style for "Pariatur i" */
   color: #333333;
   font-family: "Arial";
@@ -232,17 +230,71 @@ article p {
   line-height: 24px;
   padding-bottom: 20px;
 }
-article p:last-child {
+.about p:last-child {
   padding-bottom: 0px;
 }
-article figure {
+.about figure {
   width: 430px;
   height: 245px;
   background: #445161;
 }
-article .img-about {
+.about .img-about {
   width: 100%;
   height: 100%;
+}
+.product {
+  background-color: #f5f5f5;
+  padding: 50px;
+}
+.product h2 {
+  /* Style for "Dignity an" */
+  color: #445161;
+  font-family: "Arial";
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+}
+.product p {
+  /* Style for "Delectus d" */
+  color: #333333;
+  font-family: "Arial";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.product .left-1,
+.product .left-2,
+.product .left-3,
+.product .right-1,
+.product .right-2,
+.product .right-3 {
+  display: flex;
+}
+.product .left-1,
+.product .right-1 {
+  margin-bottom: 35px;
+}
+.product .left-2,
+.product .right-2 {
+  margin-bottom: 36px;
+}
+.product .plus {
+  /* Style for "Shape 3" */
+  width: 32px;
+  height: 32px;
+  background-color: #445161;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  padding: 0 8px;
+  margin-top: 5px;
+}
+.product-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 29px;
 }
 /******* FOOTER ********/
 footer {
