@@ -157,13 +157,16 @@ select {
   font-family: "Socialico";
   src: url(../fonts/Socialico.ttf);
 }
+body {
+  font-family: Arial, sans-serif;
+}
 .out-line {
   outline: 1px solid red;
 }
-.clearfix:after {
+.clearfix {
   content: "";
-  display: table;
   clear: both;
+  display: table;
 }
 .container {
   padding: 0;
@@ -177,19 +180,19 @@ header {
   justify-content: space-between;
 }
 header h2 {
-  font-family: Arial;
   font-size: 60px;
   line-height: 1.2;
   font-weight: 400;
   color: #fff;
 }
-header ul li {
-  font-family: Arial;
+header .header-list {
+  list-style: inside url('../images/check_icon_346.png');
+}
+header .header-list li {
   font-size: 20px;
   line-height: 36px;
   font-weight: 400;
   color: #fff;
-  list-style-type: none;
 }
 header figure {
   width: 469px;
@@ -203,19 +206,17 @@ header img-header {
 main {
   width: 100%;
 }
-.about_section {
-  width: 653px;
-}
 .about {
-  display: flex;
-  justify-content: space-between;
-  padding: 50px 0;
-  margin: 0 50px;
+  width: calc(1280px - 100px);
+  padding: 50px;
+}
+.about .about_section {
+  width: 653px;
+  float: left;
 }
 .about h2 {
   /* Style for "About your" */
   color: #445161;
-  font-family: "Arial";
   font-size: 30px;
   font-weight: 400;
   line-height: 36px;
@@ -224,7 +225,6 @@ main {
 .about p {
   /* Style for "Pariatur i" */
   color: #333333;
-  font-family: "Arial";
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -233,23 +233,18 @@ main {
 .about p:last-child {
   padding-bottom: 0px;
 }
-.about figure {
-  width: 430px;
-  height: 245px;
-  background: #445161;
-}
 .about .img-about {
-  width: 100%;
-  height: 100%;
+  float: right;
 }
+/****** Product Section *******/
 .product {
+  clear: both;
   background-color: #f5f5f5;
   padding: 50px;
 }
 .product h2 {
   /* Style for "Dignity an" */
   color: #445161;
-  font-family: "Arial";
   font-size: 30px;
   font-weight: 400;
   line-height: 36px;
@@ -258,44 +253,230 @@ main {
 .product p {
   /* Style for "Delectus d" */
   color: #333333;
-  font-family: "Arial";
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
 }
-.product .left-1,
-.product .left-2,
-.product .left-3,
-.product .right-1,
-.product .right-2,
-.product .right-3 {
-  display: flex;
-}
-.product .left-1,
-.product .right-1 {
-  margin-bottom: 35px;
-}
-.product .left-2,
-.product .right-2 {
-  margin-bottom: 36px;
-}
-.product .plus {
-  /* Style for "Shape 3" */
-  width: 32px;
-  height: 32px;
-  background-color: #445161;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 8px;
-  padding: 0 8px;
-  margin-top: 5px;
-}
 .product-section {
-  display: flex;
-  justify-content: space-between;
   margin-top: 29px;
 }
+.product-section .product_content {
+  list-style: none;
+  padding-left: 0;
+  color: #445161;
+  font-size: 16px;
+  line-height: 24px;
+}
+.product-section .product_content:after {
+  clear: both;
+  display: block;
+  content: '';
+}
+.product-section .product_content .product_list {
+  float: left;
+  width: calc(50% - 8px);
+  background: url("../images/plus_icon.png") no-repeat left 5px;
+  padding-left: 40px;
+  box-sizing: border-box;
+  text-align: justify;
+  margin-top: 35px;
+}
+.product-section .product_content .product_list:nth-child(-n+2) {
+  margin-top: 0;
+}
+.product-section .product_content .product_list:nth-child(odd) {
+  margin-right: 8px;
+}
+.product-section .product_content .product_list:nth-child(even) {
+  margin-left: 8px;
+}
+.scrinshots {
+  padding: 50px;
+}
+.scrinshots h2 {
+  /* Style for "Scrinshots" */
+  color: #445161;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+}
+.scrinshots .scrin {
+  float: left;
+  width: calc(50% - 16px);
+  margin-top: 30px;
+  margin-right: 15px;
+}
+.scrinshots:nth-child(-n+1) {
+  margin-top: 0;
+}
+.scrinshots img {
+  float: left;
+  margin-right: 15px;
+}
+.scrinshots h3 {
+  /* Style for "The descri" */
+  color: #445161;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+.scrinshots p {
+  /* Style for "Pariatur i" */
+  color: #333333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+/******** REVIEWS ************/
+.reviews {
+  width: calc(1280px - 100px);
+  background: #f5f5f5;
+  padding: 50px;
+}
+.reviews h2 {
+  /* Style for "Reviews" */
+  color: #445161;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+.reviews .review-content {
+  width: calc(50% - 8px);
+  float: left;
+}
+.reviews .review-content:nth-of-type(odd) {
+  margin-right: 8px;
+}
+.reviews .review-content:nth-of-type(even) {
+  margin-left: 8px;
+}
+.reviews .review-content:nth-of-type(n+3) {
+  margin-top: 20px;
+}
+.reviews .review-img {
+  border-radius: 50%;
+  overflow: hidden;
+  float: left;
+}
+.reviews .review {
+  background: #ebebeb;
+  position: relative;
+  color: #445161;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 18px;
+  float: right;
+  width: 483px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.reviews .review::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #ebebeb;
+  position: absolute;
+  left: -10px;
+  top: 27px;
+  transform: rotate(45deg);
+}
+.reviews .review-text {
+  /* Style for "Porro offi" */
+  color: #333333;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0;
+  padding: 16px;
+}
+.reviews .review-author {
+  /* Style for "Lourens S." */
+  color: #989898;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  padding-left: 16px;
+  padding-bottom: 16px;
+}
+/********* BUY IT NOW ***********/
+.buy-it-now {
+  padding: 50px;
+}
+.buy-it-now h2 {
+  /* Style for "Buy it now" */
+  color: #445161;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+}
+.buy-it-now h3 {
+  /* Style for "Standart" */
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  padding: 17px 0;
+}
+.buy-it-now .packages {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 29px 95px 0;
+}
+.buy-it-now .standart,
+.buy-it-now .premium,
+.buy-it-now .lux {
+  background: #445161;
+  width: 300px;
+  border-radius: 5px;
+}
+.buy-it-now .price {
+  /* Style for "$100" */
+  background-color: #fff;
+  color: #445162;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  padding: 18px 0;
+  border: 3px #445161;
+  border-style: none solid;
+}
+.buy-it-now .package {
+  /* Style for "1. Porro o" */
+  background: #445161;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 19px 20px 0;
+}
+.buy-it-now .btn-buy {
+  /* Style for "BUY" */
+  color: #445161;
+  background: #fff;
+  display: block;
+  margin: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px;
+  text-align: center;
+  border-radius: 5px;
+}
+.buy-it-now .btn-buy:hover {
+  font-weight: 600;
+}
+/*
 /******* FOOTER ********/
 footer {
   background-color: #445161;
@@ -311,7 +492,6 @@ footer h3 {
   /* Style for "Contacts" */
   text-align: center;
   color: #fff;
-  font-family: "Arial";
   font-size: 30px;
   font-weight: 400;
   line-height: 36px;
@@ -328,15 +508,26 @@ footer .contact_form form input {
   border-radius: 5px;
   margin-bottom: 21px;
   padding-left: 10px;
+  border: none;
+  color: #445162;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
 footer .contact_form form textarea {
   /* Style for "Shape 6" */
   width: 490px;
   height: 157px;
   border-radius: 5px;
+  border: none;
   margin-bottom: 21px;
   padding: 13px 0 0 10px;
   resize: none;
+  font-family: "Arial";
+  color: #445162;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
 footer .div-btn-send {
   display: flex;
@@ -350,13 +541,16 @@ footer .div-btn-send .send_btn {
   height: 40px;
   background-color: #fff;
   color: #445162;
-  font-family: "Arial";
   font-size: 16px;
   font-weight: 600;
   line-height: 40px;
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 5px;
+}
+footer .div-btn-send .send_btn:hover {
+  font-weight: 700;
+  color: black;
 }
 footer .div-btn-send a {
   display: block;
@@ -371,7 +565,6 @@ footer .contacts {
 footer .contacts ul {
   /* Style for "80 00 4568" */
   color: #fff;
-  font-family: "Arial";
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -394,6 +587,9 @@ footer a {
   text-decoration: none;
   color: #fff;
 }
+footer a:hover {
+  color: #ebebeb;
+}
 footer a:visited,
 footer a:active {
   color: #fff;
@@ -407,4 +603,16 @@ footer a:active {
   line-height: 24px;
   letter-spacing: 1.5px;
   padding-top: 32px;
+}
+.copyright {
+  /* Style for "Copyright" */
+  background: #fff;
+  color: #445162;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  /* Text style for "C, opyrigh" */
+  letter-spacing: 0.3px;
+  text-align: center;
+  padding-top: 10px;
 }
